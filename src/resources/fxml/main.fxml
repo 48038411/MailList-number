@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.geometry.Insets?>
+<StackPane xmlns="http://javafx.com/javafx/8.0.121"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.soft1841.MailController">
+    <BorderPane fx:id="borderPane">
+        <top>
+            <AnchorPane prefHeight="50.0">
+                <Hyperlink text="软件1841" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="20"/>
+                <Button styleClass="btn,btn-info" text="查询"
+                        AnchorPane.topAnchor="10" AnchorPane.rightAnchor="150" onAction="#searchByKeywords"/>
+                <ImageView fitHeight="40.0" fitWidth="40.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20">
+                    <Image url="/img/logo.png"/>
+                </ImageView>
+                <ComboBox fx:id="genderComboBox" prefWidth="120.0" promptText="请选择索引项" styleClass="btn,btn-info" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="70"/>
+                <TextField text="请输入关键词" fx:id="keywordsField" styleClass="btn,btn-warning" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="200" onAction="#enter"/>
+            </AnchorPane>
+        </top>
+        <center>
+
+            <FlowPane fx:id="studentListView" hgap="40" vgap="40">
+<padding>
+    <Insets top="50" left="50"/>
+</padding>
+            </FlowPane>
+        </center>
+    </BorderPane>
+</StackPane>
